@@ -1,12 +1,14 @@
 #![allow(dead_code)]
 #![allow(unused_variables)]
-use crate::tutorials::enums;
+#![allow(unused_imports)]
 
+use crate::tutorials::enums;
+use crate::tutorials::collections;
+use crate::tutorials::error_handling;
 
 mod tutorials;
 
 fn main() {
-
     // tutorials::guessing_game::guessing_game();
 
     // tutorials::concepts::variables();
@@ -19,5 +21,9 @@ fn main() {
 
     // tutorials::structs::main();
 
-    enums::main();
+    // enums::main();
+
+    // collections::main();
+
+    error_handling::main();
 }
