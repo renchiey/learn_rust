@@ -11,3 +11,5 @@ pub mod enums;
 pub mod collections;
 
 pub mod error_handling;
+
+pub mod types;

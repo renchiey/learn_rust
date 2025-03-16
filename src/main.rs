@@ -5,6 +5,7 @@
 use crate::tutorials::enums;
 use crate::tutorials::collections;
 use crate::tutorials::error_handling;
+use crate::tutorials::types;
 
 mod tutorials;
 
@@ -25,5 +26,7 @@ fn main() {
 
     // collections::main();
 
-    error_handling::main();
+    // error_handling::main();
+
+    types::main();
 }
