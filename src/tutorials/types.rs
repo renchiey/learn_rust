@@ -1,4 +1,5 @@
 use std::cmp::PartialOrd;
+use std::fmt::Display;
 
 // PartialOrd tells compiler that the generic is a type that can be ordered
 // Without it, it won't compiule
@@ -30,7 +31,7 @@ impl<T> Point2<T> {
     }
 }
 
-// Traits are like inheritance, provides a template for structs/enums to go off on
+// Traits are like interfaces, provides a template for structs/enums to go off on
 trait Summary {
     fn summarize(&self) -> String; // types that implement traits will implement their own method for the trait.
 
@@ -38,10 +39,6 @@ trait Summary {
         // can also define default implementations
         String::from("(Read more)...")
     }
-}
-
-trait Display {
-    fn display(&self) -> String;
 }
 
 struct NewsArticle {
@@ -68,6 +65,16 @@ fn something(item: &(impl Summary + Display)) {}
 // Clearer trait bounds with "where" clause
 fn some_function<T, U>(t: &T, u: &U) -> i32 where T: Summary + Display, U: Display {
     10
+}
+
+// lifetimes
+fn longest_with_an_announcement<'a, T>(x: &'a str, y: &'a str, ann: T) -> &'a str where T: Display {
+    println!("Announcement! {ann}");
+    if x.len() > y.len() {
+        x
+    } else {
+        y
+    }
 }
 
 pub fn main() {
