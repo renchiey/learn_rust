@@ -6,6 +6,8 @@ use crate::tutorials::enums;
 use crate::tutorials::collections;
 use crate::tutorials::error_handling;
 use crate::tutorials::types;
+use crate::tutorials::functional_features;
+use crate::tutorials::smart_pointers;
 
 mod tutorials;
 
@@ -28,5 +30,9 @@ fn main() {
 
     // error_handling::main();
 
-    types::main();
+    // types::main();
+
+    //functional_features::main();
+
+    smart_pointers::main();
 }
