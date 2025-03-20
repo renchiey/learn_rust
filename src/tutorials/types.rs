@@ -68,6 +68,9 @@ fn some_function<T, U>(t: &T, u: &U) -> i32 where T: Summary + Display, U: Displ
 }
 
 // lifetimes
+// rule 1: all parameters will be assigned a lifetime parameter that's a reference
+// rule 2: if there exists only 1 lifetime parameter, all outputs will be assigned that lifetime
+// rule 3: if in the parameters there exists &self, all outputs will be assigned the lifetime of self
 fn longest_with_an_announcement<'a, T>(x: &'a str, y: &'a str, ann: T) -> &'a str where T: Display {
     println!("Announcement! {ann}");
     if x.len() > y.len() {
