@@ -17,3 +17,5 @@ pub mod types;
 pub mod functional_features;
 
 pub mod smart_pointers;
+
+pub mod fearless_concurrency;

@@ -8,6 +8,7 @@ use crate::tutorials::error_handling;
 use crate::tutorials::types;
 use crate::tutorials::functional_features;
 use crate::tutorials::smart_pointers;
+use crate::tutorials::fearless_concurrency;
 
 mod tutorials;
 
@@ -34,5 +35,7 @@ fn main() {
 
     //functional_features::main();
 
-    smart_pointers::main();
+    // smart_pointers::main();
+
+    fearless_concurrency::main();
 }
