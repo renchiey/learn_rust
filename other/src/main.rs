@@ -2,6 +2,8 @@
 #![allow(unused_variables)]
 #![allow(unused_imports)]
 
+use tutorials::rust_async;
+
 use crate::tutorials::enums;
 use crate::tutorials::collections;
 use crate::tutorials::error_handling;
@@ -37,5 +39,7 @@ fn main() {
 
     // smart_pointers::main();
 
-    fearless_concurrency::main();
+    // fearless_concurrency::main();
+
+    rust_async::main();
 }
