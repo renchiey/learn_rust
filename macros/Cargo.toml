@@ -1,0 +1,11 @@
+[package]
+name = "macros"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+custom_macro_derive = { path="./custom_macro_derive"}
+
+[workspace]
+resolver = "2"
+members = ["custom_macro_derive"]
